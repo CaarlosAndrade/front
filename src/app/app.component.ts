@@ -21,9 +21,7 @@ export class AppComponent {
     this.serviceVeiculo.getVeiculo().subscribe((data) => { this.veiculos = data;});
   }
 
-  postVeiculo(veiculo: Veiculo){
-    this.serviceVeiculo.postVeiculo(veiculo).subscribe((data) => {console.log(data)});
-  }
+
 
   deleteVeiculo(id: number){
     this.serviceVeiculo.deleteVeiculo(id).subscribe((data) => {console.log(data)});

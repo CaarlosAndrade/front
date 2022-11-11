@@ -1,0 +1,19 @@
+<form [formGroup]="addForm" (ngSubmit)="onSubmit()">
+  <div class="input-group mb-3">
+    <input type="text" class="form-control" placeholder="Marca" aria-label="Marca" formControlName="marca">
+  </div>
+  <div class="input-group mb-3">
+    <input type="text" class="form-control" placeholder="Modelo" aria-label="Modelo" formControlName="modelo">
+  </div>
+  <div class="input-group mb-3">
+    <input type="text" class="form-control" placeholder="Placa" aria-label="Placa" formControlName="placa">
+  </div>
+  <div class="input-group mb-3">
+    <input type="number" class="form-control" placeholder="Quilometragem" aria-label="Quilometragem"
+      formControlName="quilometragem">
+  </div>
+  <div class="input-group mb-3">
+    <input type="number" class="form-control" placeholder="Ambiente" aria-label="Ambiente" formControlName="ambiente">
+  </div>
+  <button type="submit" class="btn btn-success btn-block">Cadastrar novo veiculo</button>
+</form>
