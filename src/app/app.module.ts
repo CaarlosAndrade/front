@@ -1,3 +1,4 @@
+import { AmbienteComponent } from './components/ambiente/ambiente.component';
 import { MatTableModule } from '@angular/material/table';
 import {MatIconModule} from '@angular/material/icon';
 import { HttpClientModule } from '@angular/common/http';
@@ -9,26 +10,26 @@ import { AppComponent } from './app.component';
 import { VeiculoComponent } from './components/veiculo/veiculo.component';
 import { VeiculoListaComponent } from './components/veiculo/veiculo-lista/veiculo-lista.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { NoopAnimationsModule } from '@angular/platform-browser/animations';
-import { VeiculoAlteracaoComponent } from './components/veiculo-alteracao/veiculo-alteracao.component';
+import { VeiculoAlteracaoComponent } from './components/veiculo/veiculo-alteracao/veiculo-alteracao.component';
+import { AmbienteConsultaComponent } from './components/ambiente/ambiente-consulta/ambiente-consulta.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     VeiculoComponent,
     VeiculoListaComponent,
-    VeiculoAlteracaoComponent
-    
+    VeiculoAlteracaoComponent,
+    AmbienteComponent,
+    AmbienteConsultaComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    MatTableModule,
+    MatIconModule,
     ReactiveFormsModule,
     FormsModule,
-    MatTableModule,
-    NoopAnimationsModule,
-    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

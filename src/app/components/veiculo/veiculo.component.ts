@@ -10,10 +10,10 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./veiculo.component.css']
 })
 export class VeiculoComponent implements OnInit {
-
-  veiculo: Veiculo = {marca: '', modelo: '', placa: '', quilometragem: 0, ambiente: 0};
-
+  
   constructor(private veiculoService: VeiculoService) { }
+  
+  veiculo: Veiculo = {marca: '', modelo: '', placa: '', quilometragem: 0, ambiente: 0};
 
   ngOnInit(): void {
   }

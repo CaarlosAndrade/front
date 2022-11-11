@@ -1,13 +1,15 @@
-import { VeiculoAlteracaoComponent } from './components/veiculo-alteracao/veiculo-alteracao.component';
+import { VeiculoAlteracaoComponent } from './components/veiculo/veiculo-alteracao/veiculo-alteracao.component';
 import { VeiculoListaComponent } from './components/veiculo/veiculo-lista/veiculo-lista.component';
 import { VeiculoComponent } from './components/veiculo/veiculo.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AmbienteComponent } from './components/ambiente/ambiente.component';
 
 const routes: Routes = [
-  {path: 'cadastro', component: VeiculoComponent},
-  {path: 'consulta', component: VeiculoListaComponent},
-  {path: 'alteracao/:id', component: VeiculoAlteracaoComponent},
+  {path: 'cadastro-veiculo', component: VeiculoComponent},
+  {path: 'consulta-veiculo', component: VeiculoListaComponent},
+  {path: 'cadastro-ambiente', component: AmbienteComponent},
+  {path: 'alteracao-veiculo/:id', component: VeiculoAlteracaoComponent},
 ];
 
 @NgModule({

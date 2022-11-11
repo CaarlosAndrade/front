@@ -1,0 +1,20 @@
+<form [formGroup]="addForm" (ngSubmit)="onSubmit()">
+  <div class="input-group mb-3">
+    <input type="text" class="form-control" placeholder="Bairro" aria-label="bairro" formControlName="bairro">
+  </div>
+  <div class="input-group mb-3">
+    <input type="text" class="form-control" placeholder="Cidade" aria-label="cidade" formControlName="cidade">
+  </div>
+  <div class="input-group mb-3">
+    <input type="text" class="form-control" placeholder="Estado" aria-label="estado" formControlName="estado">
+  </div>
+  <div class="input-group mb-3">
+    <input type="number" class="form-control" placeholder="Temperatura" aria-label="temperatura"
+      formControlName="temperatura">
+  </div>
+  <div class="input-group mb-3">
+    <input type="text" class="form-control" placeholder="Quailidade do Ar" aria-label="qualidadeDoAr"
+      formControlName="qualidadeDoAr">
+  </div>
+  <button type="submit" class="btn btn-success btn-block">Cadastrar novo veiculo</button>
+</form>

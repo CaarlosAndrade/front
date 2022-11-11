@@ -10,7 +10,6 @@ import { MatTableDataSource } from '@angular/material/table';
 })
 export class VeiculoListaComponent implements OnInit {
 
-  veiculos: Veiculo[] = [];
   dataSource = new MatTableDataSource<Veiculo[]>();
 
   constructor(private veiculoService: VeiculoService, private changeDetectorRefs: ChangeDetectorRef) { }

@@ -1,5 +1,5 @@
-import { Veiculo } from './../../interface/veiculo.interface';
-import { VeiculoService } from './../../service/veiculo.service';
+import { Veiculo } from '../../../interface/veiculo.interface';
+import { VeiculoService } from '../../../service/veiculo.service';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
