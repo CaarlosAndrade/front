@@ -12,17 +12,22 @@ export class VeiculoService{
 
   httpsOptions = {
     headers: new HttpHeaders({
-      'Content-Type': 'application/json',
       'Authorization': 'Basic ' + btoa('admin:$2y$10$wLPFDidSWWE4J76eKZXkBu.8XXSHiPPySzUsiHmTkHdBSBQ970umO'),
       'Access-Control-Allow-Credentials': 'true',
-      'response-type': 'text/plain'
+    }),
+    responseType: 'text' as 'text'
+  }
+
+  httpsOptionsPost = {
+    headers: new HttpHeaders({
+      'Authorization': 'Basic ' + btoa('admin:$2y$10$wLPFDidSWWE4J76eKZXkBu.8XXSHiPPySzUsiHmTkHdBSBQ970umO'),
     }) 
   }
 
   constructor(private _http : HttpClient) { }
 
   getVeiculo(): Observable<any[]>{
-    return this._http.get<any[]>('http://localhost:8080/veiculos', this.httpsOptions).pipe(tap(console.log)) as Observable<any[]>
+    return this._http.get<any[]>('http://localhost:8080/veiculos', this.httpsOptionsPost).pipe(tap(console.log)) as Observable<any[]>
   }
 
   postVeiculo(veiculo: Veiculo) {

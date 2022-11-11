@@ -1,3 +1,4 @@
+import { AmbienteService } from './../../service/ambiente.service';
 import { Ambiente } from './../../interface/ambiente.interface';
 import { VeiculoService } from './../../service/veiculo.service';
 import { Veiculo } from './../../interface/veiculo.interface';
@@ -11,11 +12,18 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 })
 export class VeiculoComponent implements OnInit {
   
-  constructor(private veiculoService: VeiculoService) { }
+
+
+  ambiente = new FormControl('');
+  ambienteList: string[] = [];
+
+  constructor(private veiculoService: VeiculoService,
+    private ambienteService: AmbienteService) { }
   
   veiculo: Veiculo = {marca: '', modelo: '', placa: '', quilometragem: 0, ambiente: 0};
 
   ngOnInit(): void {
+    this.getAmbientes();
   }
 
   addForm = new FormGroup({
@@ -37,7 +45,11 @@ export class VeiculoComponent implements OnInit {
     };
     console.log('veiculo', this.veiculo)
       this.veiculoService.postVeiculo(this.veiculo).subscribe((data) => {console.log(data)});
-    // this.addForm.reset();
   }
+
+  getAmbientes(): void {
+    this.ambienteService.getAmbiente()
+      .subscribe((data) => this.ambienteList = data.map( d => d.id));
+    }
 
 }

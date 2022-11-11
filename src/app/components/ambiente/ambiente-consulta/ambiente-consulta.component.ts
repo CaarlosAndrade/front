@@ -1,3 +1,6 @@
+import { Ambiente } from './../../../interface/ambiente.interface';
+import { MatTableDataSource } from '@angular/material/table';
+import { AmbienteService } from './../../../service/ambiente.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +10,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AmbienteConsultaComponent implements OnInit {
 
-  constructor() { }
+  dataSource = new MatTableDataSource<Ambiente[]>();
+
+  constructor(private AmbienteService: AmbienteService) { }
 
   ngOnInit(): void {
+    this.getAmbientes()
   }
+
+  getAmbientes(): void {
+    this.AmbienteService.getAmbiente()
+      .subscribe((data) => { this.dataSource.data = data;});
+    }
 
 }

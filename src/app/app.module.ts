@@ -4,6 +4,9 @@ import {MatIconModule} from '@angular/material/icon';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import {MatSelectModule} from '@angular/material/select';
+import {MatFormFieldModule} from '@angular/material/form-field';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,6 +15,7 @@ import { VeiculoListaComponent } from './components/veiculo/veiculo-lista/veicul
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { VeiculoAlteracaoComponent } from './components/veiculo/veiculo-alteracao/veiculo-alteracao.component';
 import { AmbienteConsultaComponent } from './components/ambiente/ambiente-consulta/ambiente-consulta.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -20,7 +24,8 @@ import { AmbienteConsultaComponent } from './components/ambiente/ambiente-consul
     VeiculoListaComponent,
     VeiculoAlteracaoComponent,
     AmbienteComponent,
-    AmbienteConsultaComponent
+    AmbienteConsultaComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -30,6 +35,11 @@ import { AmbienteConsultaComponent } from './components/ambiente/ambiente-consul
     MatIconModule,
     ReactiveFormsModule,
     FormsModule,
+  
+    MatSelectModule,
+    MatFormFieldModule,
+    BrowserAnimationsModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
